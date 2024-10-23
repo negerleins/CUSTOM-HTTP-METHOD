@@ -29,6 +29,7 @@ class karenPrint {
      * Checks the provided arguments and logs the result if specified.
      *
      * @param {Object} args - The object of arguments to check.
+     * @param {Object} argValues - The object of argument values to check.
      * @param {boolean} log - A flag indicating whether to log the result.
      */
     nag(args, argValues, log) {
@@ -51,4 +52,3 @@ class karenPrint {
  */
 
 module.exports = karenPrint;
-

@@ -24,7 +24,8 @@ class RetardCLI {
     new(args, callback, log) {
         const karen = new karenPrint();
 
-        const validArgs = this.#validate(args);
+        let success = true;
+        //const validArgs = this.#validate(args);
         const argValues = Object.keys(args).reduce((acc, key) => {
             const value = this.sargv.shift();
 
@@ -38,6 +39,7 @@ class RetardCLI {
                 }
             } else {
                 acc[key] = undefined;
+                success = false;
             }
 
             return acc;
@@ -45,7 +47,7 @@ class RetardCLI {
 
         karen.nag(args, argValues, log);
 
-        callback(validArgs, argValues);
+        callback(success, argValues);
     }
 }
 

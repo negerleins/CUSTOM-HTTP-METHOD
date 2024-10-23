@@ -27,7 +27,7 @@ class SpermAgent {
         const browser = this.#getRandomElement(this.browsers);
         const browserVersion = this.#randomVersion(browser.minVersion, browser.maxVersion);
         const safariVersion = this.#getRandomElement(this.safariVersions);
-
+        
         return `Mozilla/5.0 (${platform}; ${architecture}) ${engine.name}/${engineVersion} (KHTML, like Gecko) ${browser.name}/${browserVersion} Safari/${safariVersion}`;
     }
 
